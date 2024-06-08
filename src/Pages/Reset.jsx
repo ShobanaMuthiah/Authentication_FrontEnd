@@ -16,7 +16,7 @@ const handleSubmit=async(e)=>{
     .then(res=>{setmsg(res.data.message)
 
         setTimeout(() => {
-            navig('/')
+            navig('/courses')
             login();
             
         }, 1000);
