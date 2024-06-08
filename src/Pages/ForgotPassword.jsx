@@ -1,11 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
 const [email,setemail]=useState('');
 const [msg,setmsg]=useState('');
-const navig=useNavigate()
 
 
 const handleSubmit=async(e)=>{
@@ -14,11 +12,6 @@ const handleSubmit=async(e)=>{
     await axios.post('https://authentication-backend-tgky.onrender.com/api/forgotpassword',payload)
     .then(res=>{setmsg(res.data.message)
 
-        setTimeout(() => {
-            navig('/resetpassword')  
-            
-        }, 1000);
-            setemail('');
             setpassword('');
     })
     .catch(err=>{
