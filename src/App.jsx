@@ -31,7 +31,7 @@ const logout=()=>{
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Login login={login}/>}/>
       <Route path='/forgotpassword' element={<ForgotPassword/>}/>
-      <Route path='/resetpassword/:token' element={<Reset />}/>
+      <Route path='/resetpassword/:id' element={<Reset />}/>
       <Route path='/courses' element={isLoggedIn ? <Courses /> : <Navigate to="/" />} />
       </Routes>
       <Footer/>

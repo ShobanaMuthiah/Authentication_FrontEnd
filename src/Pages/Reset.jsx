@@ -6,13 +6,13 @@ const Reset = () => {
 const [password,setpassword]=useState('');
 const [msg,setmsg]=useState('');
 const navig=useNavigate()
-const {token}=useParams();
+const {id}=useParams();
 
 
 const handleSubmit=async(e)=>{
     e.preventDefault();
     const payload={password}
-    await axios.post(`https://authentication-backend-tgky.onrender.com/api/reset-password/${token}`,payload)
+    await axios.post(`https://authentication-backend-tgky.onrender.com/api/reset-password/${id}`,payload)
     .then(res=>{setmsg(res.data.message)
 
         setTimeout(() => {
