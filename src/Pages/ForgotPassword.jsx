@@ -14,7 +14,12 @@ const handleSubmit=async(e)=>{
     await axios.post('https://authentication-backend-tgky.onrender.com/api/forgotpassword',payload)
     .then(res=>{setmsg(res.data.message)
 
+        setTimeout(() => {
+            navig('/resetpassword')  
+            
+        }, 1000);
             setemail('');
+            setpassword('');
     })
     .catch(err=>{
         setmsg(err.response.data.message);
