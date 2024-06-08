@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Reset = ({login}) => {
+const Reset = () => {
 const [password,setpassword]=useState('');
 const [msg,setmsg]=useState('');
 const navig=useNavigate()
@@ -17,7 +17,7 @@ const handleSubmit=async(e)=>{
 
         setTimeout(() => {
             navig('/')
-            login();
+            
             
         }, 1000);
             setpassword('');
