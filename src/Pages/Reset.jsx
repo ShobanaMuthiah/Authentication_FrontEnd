@@ -38,7 +38,7 @@ const handleSubmit=async(e)=>{
                 <form onSubmit={handleSubmit}>
             <div className="row">
                 <div className="row-cols-sm-2">
-                <label className='col-sm-3 p-3 text-end'>
+                <label className='col-12 col-sm-4 p-2 text-sm-end'>
                     New Password:
                 </label>
                 <input className='border-black' required type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)}/><br />

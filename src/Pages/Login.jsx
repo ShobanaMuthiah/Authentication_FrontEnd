@@ -42,12 +42,12 @@ const handleSubmit=async(e)=>{
               <div className="row">
              <div className="row-cols-sm-2">
 <br />
-             <label className='col-sm-3 p-3 text-end'>
+             <label className='col-12 col-sm-4 p-2 text-sm-end'>
                     Email:
                 </label>
                 <input className='border-black' type="email"  name="email" value={email} onChange={(e)=>setemail(e.target.value)} required/><br />
 <br />
-                <label className='col-sm-3 p-3 text-end'>
+                <label className='col-12 col-sm-4 p-2 text-sm-end'>
                     Password:
                 </label>
                 <input type="password" className='border-black' name="password" value={password} onChange={(e)=>setpassword(e.target.value)} required/>
