@@ -31,18 +31,28 @@ const handleSubmit=async(e)=>{
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-            
-                <label>
-                    Password:
+            <h1 className='title'>Reset Password</h1>
+            <div className="card-center m-3">
+                <div className="card w-50 text-center">
+
+                <form onSubmit={handleSubmit}>
+            <div className="row">
+                <div className="row-cols-2">
+                <label className='col-3 p-3 text-end'>
+                    New Password:
                 </label>
-                <input type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)} />
-<br /><br />
-                <button type='submit' >
-                    Reset
+                <input className='border-black' required type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)}/><br />
+<br />
+                </div>
+            </div>
+                <button className="btn" type='submit' >
+                    Verify
                 </button>
 <h5 onSubmit={handleSubmit}>{msg}</h5>
             </form>
+
+                </div>
+            </div>
         </div>
     );
 };

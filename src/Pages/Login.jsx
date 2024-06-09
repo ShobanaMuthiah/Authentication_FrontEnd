@@ -35,25 +35,36 @@ const handleSubmit=async(e)=>{
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-              <label>
+            <h1 className='title'>Login</h1>
+      <div className="card-center m-3">
+      <div className="card  w-50 text-center">
+        <form onSubmit={handleSubmit}>
+              <div className="row">
+             <div className="row-cols-2">
+<br />
+             <label className='col-3 p-3 text-end'>
                     Email:
                 </label>
-                <input type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)}/><br />
-
-                <label>
+                <input className='border-black' type="email"  name="email" value={email} onChange={(e)=>setemail(e.target.value)} required/><br />
+<br />
+                <label className='col-3 p-3 text-end'>
                     Password:
                 </label>
-                <input type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)} />
-<br /><br />
-                <button type='submit' >
+                <input type="password" className='border-black' name="password" value={password} onChange={(e)=>setpassword(e.target.value)} required/>
+<br /><br /> </div>
+</div>
+                <button type='submit' className='btn' >
                     Login
-                </button>
-                <button onClick={handlePassword} >
+                </button><br />
+                <button onClick={handlePassword} className='btn' >
                     Forgot Password
                 </button>
 <h5 onSubmit={handleSubmit}>{msg}</h5>
+
+            
             </form>
+        </div>
+      </div>
         </div>
     );
 };

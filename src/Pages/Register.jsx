@@ -26,26 +26,37 @@ const handleSubmit=async(e)=>{
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label>
+           <div className="title">Register</div>
+            <div className="card-center m-3">
+                <div className="card card-center w-50 text-center">
+                <form onSubmit={handleSubmit}>
+                <div className="row">
+                    <div className="row-cols-2">
+                    <label className='col-3 p-3 text-end'>
                     UserName:
                 </label>
-                <input type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)}  /><br />
-                <label>
+                <input className='border-black' type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)} required  /><br />
+                <label className='col-3 p-3 text-end'>
                     Email:
                 </label>
-                <input type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)}/><br />
+                <input className='border-black' type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)} required/><br />
 
-                <label>
+                <label className='col-3 p-3 text-end'>
                     Password:
                 </label>
-                <input type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)} />
+                <input className='border-black' required type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)} />
 <br /><br />
-                <button type='submit' >
+                    </div>
+                </div>
+                <button className='btn' type='submit' >
                     Register
                 </button>
 <h5 onClick={handleSubmit}>{msg}</h5>
             </form>
+
+                </div>
+            
+           </div>
         </div>
     );
 };

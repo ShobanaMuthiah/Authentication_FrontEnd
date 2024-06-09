@@ -23,17 +23,28 @@ const handleSubmit=async(e)=>{
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-              <label>
+            <h1 className='title'>Forgot Password</h1>
+            <div className="card-center m-3">
+                <div className="card w-50 text-center">
+
+                <form onSubmit={handleSubmit}>
+            <div className="row">
+                <div className="row-cols-2">
+                <label className='col-3 p-3 text-end'>
                     Email:
                 </label>
-                <input type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)}/><br />
-<br /><br />
-                <button type='submit' >
+                <input className='border-black' required type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)}/><br />
+<br />
+                </div>
+            </div>
+                <button className="btn" type='submit' >
                     Verify
                 </button>
 <h5 onSubmit={handleSubmit}>{msg}</h5>
             </form>
+
+                </div>
+            </div>
         </div>
     );
 };
