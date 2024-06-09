@@ -35,7 +35,7 @@ const handleSubmit=async(e)=>{
                     <label className='col-sm-3 p-3 text-end'>
                     UserName:
                 </label>
-                <input className='border-black' type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)} required  /><br />
+                <input className='border-black w-75' type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)} required  /><br />
                 <label className='col-sm-3 p-3 text-end'>
                     Email:
                 </label>
