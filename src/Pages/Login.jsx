@@ -37,7 +37,7 @@ const handleSubmit=async(e)=>{
         <div>
             <h1 className='title'>Login</h1>
       <div className="card-center m-3">
-      <div className="card  w-50 text-center">
+      <div className="card card-format  text-center">
         <form onSubmit={handleSubmit}>
               <div className="row">
              <div className="row-cols-sm-2">

@@ -87,3 +87,17 @@ label{
   color: rgb(123, 70, 0) !important;
 
 }
+.card-format{
+  width:50% !important;
+
+}
+
+@media (max-width: 575.98px) { 
+.card-format{
+  width:100% !important;
+}
+input{
+  width:75% !important;
+}
+
+ }

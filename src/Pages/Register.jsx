@@ -28,20 +28,21 @@ const handleSubmit=async(e)=>{
         <div>
            <div className="title">Register</div>
             <div className="card-center m-3">
-                <div className="card card-center w-50 text-center">
+                <div className="card card-format text-center">
                 <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="row-cols-sm-2">
-                    <label className='col-sm-3 p-3 text-end'>
+                    <label className='col-12 col-sm-4 p-2 text-sm-end'>
                     UserName:
                 </label>
-                <input className='border-black w-75' type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)} required  /><br />
-                <label className='col-sm-3 p-3 text-end'>
+                <input className='border-black' type="text" name="username" value={username} onChange={(e)=>setusername(e.target.value)} required  /><br />
+               
+                <label className='col-12 col-sm-3 p-3 text-sm-end'>
                     Email:
                 </label>
                 <input className='border-black' type="email" name="email" value={email} onChange={(e)=>setemail(e.target.value)} required/><br />
 
-                <label className='col-sm-3 p-3 text-end'>
+                <label className='col-12 col-sm-3 p-3 text-sm-end'>
                     Password:
                 </label>
                 <input className='border-black' required type="password" name="password" value={password} onChange={(e)=>setpassword(e.target.value)} />
