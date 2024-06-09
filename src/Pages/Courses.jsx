@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Courses = () => {
-    const course=[
+    const course= [
           {
             "name": "Introduction to Python Programming",
             "description": "Basics of Python syntax and semantics, variables, data types, control structures, functions, and basic data structures (lists, dictionaries, tuples).",
@@ -53,6 +53,8 @@ const Courses = () => {
             "image_url": "https://via.placeholder.com/300x150?text=Unity+Course"
           }
         ]
+      
+      
       
       
     return (
