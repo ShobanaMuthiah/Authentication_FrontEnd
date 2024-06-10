@@ -7,20 +7,27 @@ const [username,setusername]=useState('');
 const [email,setemail]=useState('');
 const [password,setpassword]=useState('');
 const [msg,setmsg]=useState('');
+const [toast,settoast]=useState(false)
 const navig=useNavigate()
 
 const handleSubmit=async(e)=>{
     e.preventDefault();
     const payload={username,email,password}
     await axios.post('https://authentication-backend-tgky.onrender.com/api/userregister',payload)
-    .then(res=>setmsg(res.data.message))
-    .catch(error=>{
-        setmsg(error.response.data.message)
-    })
-    setusername('');
+    .then(res=>{setmsg(res.data.message)
+        settoast(true)
+       setTimeout(()=>{
+setusername('');
     setemail('');
     setpassword('');
     navig('/login')
+       },1000) 
+    })
+    .catch(error=>{
+        setmsg(error.response.data.message)
+        settoast(true)
+    })
+    
 
 }
 
@@ -52,8 +59,33 @@ const handleSubmit=async(e)=>{
                 <button className='btn' type='submit' >
                     Register
                 </button>
-<h5 onClick={handleSubmit}>{msg}</h5>
+                {toast && (
+                        <div className="toast-container position-fixed top-0 end-0 p-3" >
+                            <div className="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                              
+                            <div className="d-flex">
+                            <div className="toast-body fw-bolder w-100  text-bg-info">
+                                    {msg}
+                                </div>
+                            
+                                <div className="toast-header  ">
+                                    
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" onClick={()=>settoast(false)}></button>
+                                </div>
+                                
+                            </div>
+                                
+                            </div>
+                        </div>
+                    )}
+
             </form>
+
+          
+
+          
+    
+ 
 
                 </div>
             
